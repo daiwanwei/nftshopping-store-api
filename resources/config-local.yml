@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+database:
+  mongo:
+    uri: mongodb://localhost:27017/nftshopping-store
+    source: nftshopping-store
+  redis:
+    uri: localhost:6379
+    password: DbWV0cfe
+
+
+logger:
+  level: debug
+  mode: dev
+
+casbin:
+  model: "./resources/auth_model.conf"
+  policy: "./resources/auth_policy.csv"
+
+item:
+  domain: "http://localhost:3000/api/"
